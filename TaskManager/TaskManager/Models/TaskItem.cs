@@ -1,0 +1,15 @@
+﻿namespace TaskManager.Models;
+
+
+public class TaskItem
+{
+    public int Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public bool IsCompleted { get; set; }
+
+    public override string ToString()
+    {
+        var status = IsCompleted ? "[✓]" : "[ ]";
+        return $"{Id}. {status} {Title}";
+    }
+}
